@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Area 51 Bar – Street Food a Vimercate. Burger, Pinsa, Aperitivi, Specialità. Prenota online."/>
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <title>AREA 51 – Bar & Street Food · Vimercate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<nav id="navbar">
+  <div class="nav-wrap">
+    <a href="#hero" class="nav-logo">
+      <img src="images/logo.png" alt="Area 51"/>
+      <div>
+        <div class="nav-logo-name">AREA 51</div>
+        <div class="nav-logo-sub">Bar & Street Food · Vimercate</div>
+      </div>
+    </a>
+
+    <ul class="nav-center" id="navCenter">
+      <li><a href="#about"        onclick="closeMenu()">Il Locale</a></li>
+      <li><a href="#menu"         onclick="closeMenu()">Menu</a></li>
+      <li><a href="#esperienze"   onclick="closeMenu()">Specialità</a></li>
+      <li><a href="#info"         onclick="closeMenu()">Orari</a></li>
+      <li><a href="#prenotazione" onclick="closeMenu()">Contatti</a></li>
+      <li><a href="#prenotazione" onclick="closeMenu()" class="nav-cta">Prenota</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="images/hero-cocktail.png" alt="Area 51 Bar cocktail"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Bar & Street Food · Vimercate</div>
+    <img src="images/logo.png" alt="Area 51" class="hero-logo"/>
+    <h1 class="hero-title"><em>AREA</em> 51</h1>
+    <p class="hero-sub">Un posto che non dimenticherai</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-gold">Scopri il Menu</a>
+      <a href="#prenotazione" class="btn-ghost">Prenota un Tavolo</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span></span><p>Scopri di più</p></div>
+</section>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section id="about" class="sezione">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img fade-up">
+        <img src="images/logo.png" alt="Area 51 Logo"/>
+      </div>
+      <div class="about-txt fade-up">
+        <span class="eyebrow">Il Nostro Locale</span>
+        <h2 class="titolo">Un posto che<br/>non dimenticherai</h2>
+        <div class="linea"></div>
+        <p>Area 51 Bar è il punto di riferimento per il street food di qualità a Vimercate. Burger stellari, pinse, specialità uniche e cocktail ricercati in un'atmosfera che ti sorprende ad ogni visita.</p>
+        <p>Ogni piatto nasce da ingredienti freschi selezionati con cura, ricette originali e una passione autentica per la cucina che si sente ad ogni morso. Benvenuto nell'Area 51.</p>
+        <div class="stats">
+          <div><div class="stat-n">4</div><div class="stat-l">Burger originali</div></div>
+          <div><div class="stat-n">4</div><div class="stat-l">Pinse</div></div>
+          <div><div class="stat-n">2</div><div class="stat-l">Aperitivi esclusivi</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MENU ═══════════════ -->
+<section id="menu" class="sezione">
+  <div class="container">
+    <div class="center fade-up">
+      <span class="eyebrow">Cucina</span>
+      <h2 class="titolo">Il Nostro Menu</h2>
+      <div class="linea cx"></div>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab on"  onclick="mostraTab('aperitivi',this)">Aperitivi</button>
+      <button class="tab"     onclick="mostraTab('appetizer',this)">Appetizer</button>
+      <button class="tab"     onclick="mostraTab('burger',this)">Burger</button>
+      <button class="tab"     onclick="mostraTab('pinsa',this)">Pinsa</button>
+      <button class="tab"     onclick="mostraTab('specialita',this)">Specialità</button>
+      <button class="tab"     onclick="mostraTab('dolci',this)">Dolci</button>
+    </div>
+
+    <!-- APERITIVI -->
+    <div class="mgrid on" id="t-aperitivi">
+      <div class="voce"><div><div class="vn">Aperitivo Classico &amp; Cocktail</div><div class="vd">Tagliere di salumi e formaggi con taralli pugliesi</div></div><div class="vp">€ 12,00 <span class="vs">/ p.</span></div></div>
+      <div class="voce"><div><div class="vn">Aperitivo dell'Area 51 &amp; Cocktail</div><div class="vd">Mix di fritti della casa con salse home made</div></div><div class="vp">€ 14,00 <span class="vs">/ p.</span></div></div>
+    </div>
+
+    <!-- APPETIZER -->
+    <div class="mgrid" id="t-appetizer">
+      <div class="voce"><div><div class="vn">Anelli di Cipolla con Salsa BBQ *</div></div><div class="vp">€ 5,50</div></div>
+      <div class="voce"><div><div class="vn">Mozzarella Stick *</div></div><div class="vp">€ 6,00</div></div>
+      <div class="voce"><div><div class="vn">Polpettine di Melanzane *</div><div class="vd">Con salsa yogurt e menta</div></div><div class="vp">€ 6,00</div></div>
+      <div class="voce"><div><div class="vn">Nachos con Guacamole e Salsa Mex</div></div><div class="vp">€ 5,00</div></div>
+      <div class="voce"><div><div class="vn">Patatine Fritte</div></div><div class="vp">€ 4,50</div></div>
+      <div class="voce"><div><div class="vn">Patate Americane Fritte</div></div><div class="vp">€ 5,50</div></div>
+      <p class="mnota">* Surgelati all'origine per garantirne freschezza e qualità</p>
+    </div>
+
+    <!-- BURGER -->
+    <div class="mgrid" id="t-burger">
+      <div class="voce"><div><div class="vn">Saturno Burger</div><div class="vd">Hamburger di manzo, anelli di cipolla, salsa BBQ, insalata e Cheddar</div></div><div class="vp">€ 12,50</div></div>
+      <div class="voce"><div><div class="vn">Venere Burger</div><div class="vd">Pollo fritto, Zola piccante e salsa al miele</div></div><div class="vp">€ 12,00</div></div>
+      <div class="voce"><div><div class="vn">Mercurio Burger</div><div class="vd">Hamburger di manzo, pomodoro, bacon croccante, insalata, Cheddar, maionese e ketchup</div></div><div class="vp">€ 12,50</div></div>
+      <div class="voce"><div><div class="vn">Marte Burger</div><div class="vd">Chiodo, maionese, cipolla caramellata della casa e insalata</div></div><div class="vp">€ 12,00</div></div>
+      <p class="mburger">Tutti gli hamburger sono accompagnati da patatine fritte classiche o americane</p>
+    </div>
+
+    <!-- PINSA -->
+    <div class="mgrid" id="t-pinsa">
+      <div class="voce"><div><div class="vn">Via Lattea</div><div class="vd">Zola piccante, mozzarella, ricotta, stracchino, miele di castagno e noci</div></div><div class="vp">€ 9,50</div></div>
+      <div class="voce"><div><div class="vn">Cassiopea</div><div class="vd">Pomodoro, mozzarella, tonno, cipolla caramellata della casa</div></div><div class="vp">€ 9,50</div></div>
+      <div class="voce"><div><div class="vn">Andromeda</div><div class="vd">Patata americana, bacon, mozzarella e rosmarino</div></div><div class="vp">€ 10,00</div></div>
+      <div class="voce"><div><div class="vn">Polaris</div><div class="vd">Ragù alla bolognese, mozzarella e ricotta salata</div></div><div class="vp">€ 9,00</div></div>
+    </div>
+
+    <!-- SPECIALITÀ -->
+    <div class="mgrid" id="t-specialita">
+      <div class="voce"><div><div class="vn">Pulled Pork Intergalattico</div><div class="vd">Spalla di suino marinata e cotta a bassa temperatura con salsa BBQ, ricotta salata e cipolla caramellata</div></div><div class="vp">€ 11,50</div></div>
+      <div class="voce"><div><div class="vn">Arrosticini Marinati *</div><div class="vd">Arrosticini grigliati di pecora marinati con mix di erbe e spezie</div></div><div class="vp">€ 1,20 <span class="vs">/ pz</span></div></div>
+      <div class="voce"><div><div class="vn">Alette di Pollo Extraterrestri</div><div class="vd">Alette piccanti marinate nella nostra salsa segreta a base di soia</div></div><div class="vp">€ 8,50</div></div>
+      <div class="voce"><div><div class="vn">Patate Area 51</div><div class="vd">Patate caserecce con uno speciale mix di spezie</div></div><div class="vp">€ 5,00</div></div>
+      <p class="mnota">* Surgelati all'origine per garantirne freschezza e qualità</p>
+    </div>
+
+    <!-- DOLCI -->
+    <div class="mgrid" id="t-dolci">
+      <div class="voce"><div><div class="vn">Cheesecake Basca</div><div class="vd">Con topping a scelta</div></div><div class="vp">€ 5,50</div></div>
+      <div class="voce"><div><div class="vn">Tiramisù</div></div><div class="vp">€ 5,00</div></div>
+      <div class="voce"><div><div class="vn">Brownies</div><div class="vd">Con gelato alla crema e caramello salato al whisky *</div></div><div class="vp">€ 6,00</div></div>
+      <p class="mnota">* Surgelati all'origine per garantirne freschezza e qualità</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SPECIALITÀ CARDS ═══════════════ -->
+<section id="esperienze" class="sezione">
+  <div class="container">
+    <div class="center fade-up">
+      <span class="eyebrow">Cosa offriamo</span>
+      <h2 class="titolo">Le Nostre Specialità</h2>
+      <div class="linea cx"></div>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card fade-up">
+        <div class="exp-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Burger"/></div>
+        <div class="exp-body">
+          <div class="exp-label">Street Food</div>
+          <div class="exp-title">Burger & Pinsa</div>
+          <div class="exp-desc">Quattro burger originali e quattro pinse con ingredienti freschi. Ogni ricetta racconta una storia.</div>
+          <a href="#menu" class="exp-link">Vedi il menu →</a>
+        </div>
+      </div>
+      <div class="exp-card fade-up">
+        <div class="exp-img"><img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80" alt="Cocktail"/></div>
+        <div class="exp-body">
+          <div class="exp-label">Aperitivo</div>
+          <div class="exp-title">Cocktail & Aperitivi</div>
+          <div class="exp-desc">Dal classico al creativo. Taglieri e fritti home made per iniziare la serata nel modo giusto.</div>
+          <a href="#menu" class="exp-link">Scopri gli aperitivi →</a>
+        </div>
+      </div>
+      <div class="exp-card fade-up">
+        <div class="exp-img"><img src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=600&q=80" alt="Specialità"/></div>
+        <div class="exp-body">
+          <div class="exp-label">Specialità</div>
+          <div class="exp-title">Piatti Unici</div>
+          <div class="exp-desc">Pulled pork a bassa temperatura, arrosticini marinati, alette piccanti. Solo all'Area 51.</div>
+          <a href="#menu" class="exp-link">Vedi le specialità →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BANNER JAZZ ═══════════════ -->
+<section id="banner">
+  <div class="banner-mask"></div>
+  <div class="banner-inner fade-up">
+    <div class="banner-note">♪</div>
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:.6rem;">Atmosfera unica ogni sera</span>
+    <h2 class="banner-title">Musica dal vivo &amp; serate speciali</h2>
+    <p class="banner-sub">Dai cocktail jazz del venerdì alle serate a tema del sabato — ogni sera all'Area 51 è un'esperienza diversa. Prenota il tuo tavolo e vivi la serata.</p>
+    <div class="hero-btns">
+      <a href="#prenotazione" class="btn-gold">Prenota Ora</a>
+      <a href="tel:+393513473342" class="btn-ghost">351 347 3342</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRENOTAZIONE ═══════════════ -->
+<section id="prenotazione" class="sezione">
+  <div class="container">
+    <div class="fade-up" style="margin-bottom:3rem;">
+      <span class="eyebrow">Contatti & Prenotazioni</span>
+      <h2 class="titolo">Prenota un Tavolo</h2>
+      <div class="linea"></div>
+    </div>
+
+    <div id="formWrap">
+      <div class="prenota-wrap">
+        <!-- FORM -->
+        <div>
+          <div class="fgrid">
+            <div class="fg"><label>Nome <span>*</span></label><input type="text" id="nome" placeholder="Mario" autocomplete="given-name"/></div>
+            <div class="fg"><label>Cognome <span>*</span></label><input type="text" id="cognome" placeholder="Rossi" autocomplete="family-name"/></div>
+            <div class="fg"><label>Telefono <span>*</span></label><input type="tel" id="telefono" placeholder="333 123 4567" autocomplete="tel"/></div>
+            <div class="fg"><label>Email</label><input type="email" id="email" placeholder="mario@email.it" autocomplete="email"/></div>
+            <div class="fg"><label>Data <span>*</span></label><input type="date" id="data"/></div>
+            <div class="fg"><label>Orario <span>*</span></label>
+              <select id="ora">
+                <option value="">Seleziona orario</option>
+                <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+                <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option>
+                <option>21:00</option><option>21:30</option>
+              </select>
+            </div>
+            <div class="fg"><label>Numero Persone <span>*</span></label>
+              <select id="persone">
+                <option value="">Seleziona</option>
+                <option value="1">1 persona</option><option value="2">2 persone</option>
+                <option value="3">3 persone</option><option value="4">4 persone</option>
+                <option value="5">5 persone</option><option value="6">6 persone</option>
+                <option value="7">7 persone</option><option value="8">8 persone</option>
+                <option value="9">9+ persone</option>
+              </select>
+            </div>
+            <div class="fg"><label>Occasione</label>
+              <select id="occasione">
+                <option value="">Nessuna</option>
+                <option>Compleanno</option><option>Anniversario</option>
+                <option>Cena di lavoro</option><option>Serata tra amici</option><option>Altro</option>
+              </select>
+            </div>
+            <div class="fg full">
+              <label>Note / Richieste speciali</label>
+              <textarea id="note" placeholder="Allergie, posti particolari, richieste speciali…"></textarea>
+            </div>
+          </div>
+          <div class="f-err" id="f-err"></div>
+          <button class="btn-submit" id="btnSubmit" onclick="prenota()">Conferma Prenotazione</button>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="p-sidebar">
+          <div class="p-sb-row">
+            <div class="p-sb-lbl">Indirizzo</div>
+            <div class="p-sb-val">SP45, 1<br/>20871 Vimercate (MB)</div>
+            <a href="https://maps.google.com/?q=SP45+1+Vimercate" target="_blank" class="ilink">Apri in Maps →</a>
+          </div>
+          <div class="p-sb-row">
+            <div class="p-sb-lbl">Telefono</div>
+            <div class="p-sb-val"><a href="tel:+393513473342">351 347 3342</a></div>
+            <a href="https://wa.me/393513473342" target="_blank" class="ilink">WhatsApp →</a>
+          </div>
+          <div class="p-sb-row">
+            <div class="p-sb-lbl">Giorno di chiusura</div>
+            <div class="p-sb-val">Domenica</div>
+          </div>
+          <div class="p-sb-row">
+            <div class="p-sb-note">Per gruppi oltre 8 persone o eventi privati, chiamaci direttamente al 351 347 3342.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONFERMA -->
+    <div class="conferma" id="conferma">
+      <div class="conf-ico">✓</div>
+      <h3>Prenotazione Ricevuta</h3>
+      <p id="conf-msg"></p>
+      <p>Ti contatteremo al numero fornito per confermare.<br/>Per info: <a href="tel:+393513473342">351 347 3342</a></p>
+      <button class="btn-sm" onclick="nuovaPrenota()">Nuova Prenotazione</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ INFO / ORARI ═══════════════ -->
+<section id="info">
+  <div class="container">
+    <div class="info-grid fade-up">
+      <div class="ib">
+        <div class="ib-lbl">Indirizzo</div>
+        <div class="ib-val">SP45, 1<br/>20871 Vimercate (MB)</div>
+        <a href="https://maps.google.com/?q=SP45+1+Vimercate" target="_blank" class="ilink">Apri in Maps →</a>
+      </div>
+      <div class="ib">
+        <div class="ib-lbl">Orari di Apertura</div>
+        <div class="orari">
+          <div class="or"><span class="og">Mercoledì</span><span class="oo">06:00 – 22:00</span></div>
+          <div class="or"><span class="og">Giovedì</span><span class="oo">06:00 – 22:00</span></div>
+          <div class="or"><span class="og">Venerdì</span><span class="oo">06:00 – 02:00</span></div>
+          <div class="or"><span class="og">Sabato</span><span class="oo">08:00 – 02:00</span></div>
+          <div class="or"><span class="og">Domenica</span><span class="oo chiuso">Chiuso</span></div>
+          <div class="or"><span class="og">Lunedì</span><span class="oo">06:00 – 18:30</span></div>
+          <div class="or"><span class="og">Martedì</span><span class="oo">06:00 – 18:30</span></div>
+        </div>
+      </div>
+      <div class="ib">
+        <div class="ib-lbl">Contatti</div>
+        <div class="ib-val"><a href="tel:+393513473342">351 347 3342</a></div>
+        <a href="https://wa.me/393513473342" target="_blank" class="ilink">WhatsApp →</a>
+      </div>
+      <div class="ib">
+        <div class="ib-lbl">Seguici</div>
+        <div class="ib-val" style="font-size:.85rem;color:rgba(250,248,244,.45);line-height:1.8;">Resta aggiornato su eventi, promozioni e novità del locale.</div>
+        <a href="https://www.facebook.com/p/AREA-51-vimercate-61576139318551/" target="_blank" class="ilink">Facebook →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="container">
+    <div class="ft-inner">
+      <div class="ft-logo">
+        <img src="images/logo.png" alt="Area 51"/>
+        <div>
+          <div class="fn">AREA 51</div>
+          <div class="fs">Bar & Street Food · Vimercate</div>
+        </div>
+      </div>
+      <nav class="ft-nav">
+        <a href="#about">Il Locale</a>
+        <a href="#menu">Menu</a>
+        <a href="#esperienze">Specialità</a>
+        <a href="#prenotazione">Prenota</a>
+        <a href="#info">Orari</a>
+        <a href="https://www.facebook.com/p/AREA-51-vimercate-61576139318551/" target="_blank">Facebook</a>
+      </nav>
+      <div class="ft-contacts">
+        <a href="tel:+393513473342">351 347 3342</a>
+        <span>SP45, 1 – Vimercate (MB)</span>
+      </div>
+    </div>
+    <div class="ft-copy">
+      <span>© 2026 Area 51 Bar – Vimercate</span>
+      <span>SP45, 1 – 20871 Vimercate (MB)</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
