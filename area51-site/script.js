@@ -16,7 +16,7 @@ async function salvaPrenotazione(payload) {
     })
     return res.ok
   } catch (e) {
-    console.warn('Supabase non raggiungibile, prenotazione salvata localmente', e)
+    console.warn('Supabase non raggiungibile', e)
     return false
   }
 }
@@ -24,23 +24,44 @@ async function salvaPrenotazione(payload) {
 // ── NAVBAR ───────────────────────────────────────────────────────────
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60)
-})
+}, { passive: true })
 
 function toggleMenu() {
-  document.getElementById('navCenter').classList.toggle('open')
-  document.getElementById('hamburger').classList.toggle('open')
+  const nav = document.getElementById('navCenter')
+  nav.classList.contains('open') ? closeMenu() : openMenu()
 }
+
+function openMenu() {
+  document.getElementById('navCenter').classList.add('open')
+  document.getElementById('hamburger').classList.add('open')
+  document.getElementById('navOverlay').classList.add('show')
+  document.body.classList.add('menu-open')
+}
+
 function closeMenu() {
   document.getElementById('navCenter').classList.remove('open')
   document.getElementById('hamburger').classList.remove('open')
+  document.getElementById('navOverlay').classList.remove('show')
+  document.body.classList.remove('menu-open')
 }
-// Chiudi menu cliccando fuori
-document.addEventListener('click', e => {
-  const nav = document.getElementById('navCenter')
-  const ham = document.getElementById('hamburger')
-  if (nav.classList.contains('open') && !nav.contains(e.target) && !ham.contains(e.target)) {
-    closeMenu()
-  }
+
+// ── CHIUDI MENU SUI LINK INTERNI ─────────────────────────────────────
+// Attacca il closeMenu direttamente sui link del nav (non sull'overlay del documento)
+// così non interferisce con il click e la navigazione avviene normalmente
+document.querySelectorAll('#navCenter a').forEach(link => {
+  link.addEventListener('click', () => {
+    // Piccolo delay per permettere lo scroll-to-anchor prima di chiudere
+    setTimeout(closeMenu, 80)
+  })
+})
+
+// Chiudi con ESC
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu() })
+
+// Chiudi cliccando/tappando sull'overlay (doppio listener per iOS)
+document.getElementById('navOverlay').addEventListener('touchend', e => {
+  e.preventDefault()
+  closeMenu()
 })
 
 // ── MENU TABS ────────────────────────────────────────────────────────
@@ -54,11 +75,13 @@ function mostraTab(nome, btn) {
 // ── FADE-UP SCROLL ───────────────────────────────────────────────────
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis') })
-}, { threshold: 0.12 })
+}, { threshold: 0.08 })
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el))
 
 // ── DATA MINIMA ──────────────────────────────────────────────────────
-document.getElementById('data').min = new Date().toISOString().split('T')[0]
+const oggi = new Date()
+oggi.setHours(0, 0, 0, 0)
+document.getElementById('data').min = oggi.toISOString().split('T')[0]
 
 // ── PRENOTAZIONE ─────────────────────────────────────────────────────
 async function prenota() {
@@ -77,22 +100,28 @@ async function prenota() {
     note:      document.getElementById('note').value.trim()
   }
 
-  // Validazione
   if (!v.nome || !v.cognome || !v.telefono || !v.data || !v.ora || !v.persone) {
-    err.textContent = 'Compila tutti i campi obbligatori (*).'; err.style.display = 'block'; return
+    err.textContent = 'Compila tutti i campi obbligatori (*).'
+    err.style.display = 'block'
+    err.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    return
   }
-  const d = new Date(v.data)
-  if (d < new Date(new Date().toDateString())) {
+
+  // Parsing data sicuro (evita bug timezone)
+  const [y, m, d] = v.data.split('-').map(Number)
+  const dataObj = new Date(y, m - 1, d)
+  dataObj.setHours(0, 0, 0, 0)
+
+  if (dataObj < oggi) {
     err.textContent = 'Seleziona una data futura.'; err.style.display = 'block'; return
   }
-  if (d.getDay() === 0) {
+  if (dataObj.getDay() === 0) {
     err.textContent = 'Siamo chiusi la domenica. Scegli un altro giorno.'; err.style.display = 'block'; return
   }
 
   const btn = document.getElementById('btnSubmit')
   btn.disabled = true; btn.textContent = 'Invio in corso…'
 
-  // Salva su Supabase
   await salvaPrenotazione({
     nome: v.nome, cognome: v.cognome,
     telefono: v.telefono, email: v.email || null,
@@ -102,8 +131,7 @@ async function prenota() {
     note: v.note || null
   })
 
-  // Mostra conferma
-  const dataFmt = d.toLocaleDateString('it-IT', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
+  const dataFmt = dataObj.toLocaleDateString('it-IT', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
   document.getElementById('conf-msg').innerHTML =
     `<strong>${v.nome} ${v.cognome}</strong> — ${dataFmt} alle <strong>${v.ora}</strong> ` +
     `per <strong>${v.persone} ${parseInt(v.persone) === 1 ? 'persona' : 'persone'}</strong>` +
