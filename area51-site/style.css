@@ -201,27 +201,6 @@ img   { display: block; max-width: 100%; }
 .oo { color: rgba(250,248,244,.8); font-weight: 500; }
 .oo.chiuso { color: rgba(180,80,80,.7); font-style: italic; }
 
-/* ─────────────── MAPPA ─────────────── */
-.map-wrap {
-  position: relative; height: 380px; margin-top: 2rem;
-  border: 1px solid var(--border); overflow: hidden;
-  filter: grayscale(30%) contrast(1.1);
-  transition: filter .3s;
-}
-.map-wrap:hover { filter: grayscale(0%) contrast(1); }
-.map-btn {
-  position: absolute; bottom: 1.2rem; right: 1.2rem;
-  background: var(--nero); color: var(--oro);
-  border: 1px solid var(--border);
-  padding: .6rem 1.2rem; font-size: .65rem;
-  letter-spacing: 2px; text-transform: uppercase;
-  border-radius: 2px; transition: background .3s;
-  z-index: 1;
-}
-.map-btn:hover { background: var(--nero2); }
-
-@media (max-width: 768px) { .map-wrap { height: 260px; } }
-
 /* ─────────────── FOOTER ─────────────── */
 footer { background: var(--nero); border-top: 1px solid var(--border); padding: 2.5rem 0 1.8rem; }
 .ft-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; padding-bottom: 2rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(200,169,110,.08); }

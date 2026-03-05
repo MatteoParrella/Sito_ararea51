@@ -1,3 +1,0 @@
-/*
-  X-Frame-Options: SAMEORIGIN
-  Content-Security-Policy: frame-src 'self' https://maps.google.com https://www.google.com https://maps.googleapis.com
