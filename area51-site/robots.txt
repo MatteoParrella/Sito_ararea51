@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /privacy.html
+Disallow: /cookie.html
 
-Sitemap: https://area51vimercate.it/sitemap.xm
+Sitemap: https://area51vimercate.it/sitemap.xml

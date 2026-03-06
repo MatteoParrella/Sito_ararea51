@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO primario -->
+  <title>Orari & Dove Siamo – AREA 51 Bar Vimercate</title>
+  <meta name="description" content="Orari di apertura, indirizzo e contatti di Area 51 Bar Vimercate. SP45 1, 20871 Vimercate MB. Telefono: 351 347 3342."/>
+  <meta name="keywords" content="bar vimercate, street food vimercate, burger vimercate, pinsa vimercate, aperitivo vimercate, area 51 vimercate"/>
+  <meta name="author" content="Area 51 Bar – Vimercate"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://area51vimercate.it/info.html"/>
+
+  <!-- Geo -->
+  <meta name="geo.region" content="IT-MB"/>
+  <meta name="geo.placename" content="Vimercate"/>
+  <meta name="geo.position" content="45.6171;9.3654"/>
+  <meta name="ICBM" content="45.6171, 9.3654"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant"/>
+  <meta property="og:title" content="Orari & Dove Siamo – AREA 51 Bar Vimercate"/>
+  <meta property="og:description" content="Orari di apertura, indirizzo e contatti di Area 51 Bar Vimercate. SP45 1, 20871 Vimercate MB. Telefono: 351 347 3342."/>
+  <meta property="og:image" content="https://area51vimercate.it/images/hero-cocktail.png"/>
+  <meta property="og:url" content="https://area51vimercate.it/info.html"/>
+  <meta property="og:site_name" content="Area 51 Bar Vimercate"/>
+  <meta property="og:locale" content="it_IT"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Orari & Dove Siamo – AREA 51 Bar Vimercate"/>
+  <meta name="twitter:description" content="Orari di apertura, indirizzo e contatti di Area 51 Bar Vimercate. SP45 1, 20871 Vimercate MB. Telefono: 351 347 3342."/>
+  <meta name="twitter:image" content="https://area51vimercate.it/images/hero-cocktail.png"/>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Area 51 Bar & Street Food",
+    "image": "https://area51vimercate.it/images/hero-cocktail.png",
+    "url": "https://area51vimercate.it",
+    "telephone": "+393513473342",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "SP45, 1",
+      "addressLocality": "Vimercate",
+      "addressRegion": "MB",
+      "postalCode": "20871",
+      "addressCountry": "IT"
+    },
+    "geo": {"@type": "GeoCoordinates","latitude": 45.6171,"longitude": 9.3654},
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"06:00","closes":"22:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday"],"opens":"06:00","closes":"02:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"08:00","closes":"02:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday"],"opens":"06:00","closes":"18:30"}
+    ],
+    "servesCuisine": ["Burger","Street Food","Pinsa","Cocktail"],
+    "priceRange": "€€",
+    "sameAs": [
+      "https://www.facebook.com/p/AREA-51-vimercate-61576139318551/",
+      "https://www.instagram.com/area51vimercate/"
+    ],
+    "hasMap": "https://maps.google.com/?q=SP45+1+Vimercate",
+    "reservations": "https://area51vimercate.it/contatti.html"
+  }
+  </script>
+  
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <meta name="theme-color" content="#0e0e0e"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Analytics (Umami) -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="2e6f1b54-01ca-434e-818d-171a9f8963a6"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/global.css"/>
+  
+</head>
+<body>
+<nav id="navbar" role="navigation" aria-label="Navigazione principale">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo" aria-label="Area 51 Bar – Home">
+      <img src="images/logo.png" alt="Area 51 Logo" width="40" height="40" loading="eager"/>
+      <div>
+        <div class="nav-logo-name">AREA 51</div>
+        <div class="nav-logo-sub">Bar &amp; Street Food · Vimercate</div>
+      </div>
+    </a>
+    <ul class="nav-center" id="navCenter">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specialita.html">Specialità</a></li>
+      <li><a href="info.html">Orari & Info</a></li>
+      <li><a href="contatti.html">Prenota</a></li>
+      <li><a href="contatti.html" class="nav-cta">Prenota</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Apri/chiudi menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" role="presentation"></div>
+<main id="main-content">
+
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep"> › </span><span class="cur">Orari &amp; Info</span></nav>
+    <span class="eyebrow">Trovaci</span>
+    <h1 class="titolo">Orari &amp; Info</h1>
+    <div class="linea"></div>
+  </div>
+</div>
+
+<section id="info" style="padding:5rem 0" aria-label="Orari e informazioni">
+  <div class="container">
+    <div class="info-grid fade-up">
+      <div class="ib"><div class="ib-lbl">Indirizzo</div><div class="ib-val">SP45, 1<br/>20871 Vimercate (MB)</div><a href="https://maps.google.com/?q=SP45+1+Vimercate" target="_blank" rel="noopener" class="ilink">Apri in Maps →</a></div>
+      <div class="ib">
+        <div class="ib-lbl">Orari di Apertura</div>
+        <div class="orari">
+          <div class="or"><span class="og">Mercoledì</span><span class="oo">06:00 – 22:00</span></div>
+          <div class="or"><span class="og">Giovedì</span><span class="oo">06:00 – 22:00</span></div>
+          <div class="or"><span class="og">Venerdì</span><span class="oo">06:00 – 02:00</span></div>
+          <div class="or"><span class="og">Sabato</span><span class="oo">08:00 – 02:00</span></div>
+          <div class="or"><span class="og">Domenica</span><span class="oo chiuso">Chiuso</span></div>
+          <div class="or"><span class="og">Lunedì</span><span class="oo">06:00 – 18:30</span></div>
+          <div class="or"><span class="og">Martedì</span><span class="oo">06:00 – 18:30</span></div>
+        </div>
+      </div>
+      <div class="ib"><div class="ib-lbl">Contatti</div><div class="ib-val"><a href="tel:+393513473342">351 347 3342</a></div><a href="https://wa.me/393513473342" target="_blank" rel="noopener" class="ilink">WhatsApp →</a></div>
+      <div class="ib"><div class="ib-lbl">Seguici</div><div class="ib-val" style="font-size:.85rem;color:rgba(250,248,244,.45);line-height:1.8;">Resta aggiornato su eventi, promozioni e novità.</div><a href="https://www.facebook.com/p/AREA-51-vimercate-61576139318551/" target="_blank" rel="noopener" class="ilink">Facebook →</a><a href="https://www.instagram.com/area51vimercate/" target="_blank" rel="noopener" class="ilink" style="margin-left:1rem;">Instagram →</a></div>
+    </div>
+    <div class="map-wrap fade-up">
+      <iframe title="Mappa Area 51 Bar Vimercate" src="https://maps.google.com/maps?q=AREA+51,+SP45,+1,+20871+Vimercate+MB&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a href="https://maps.google.com/?q=Area+51+Bar+SP45+1+Vimercate" target="_blank" rel="noopener" class="map-btn">Apri in Google Maps →</a>
+    </div>
+    <div class="center fade-up" style="margin-top:3rem">
+      <a href="contatti.html" class="btn-gold">Prenota un Tavolo →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer role="contentinfo">
+  <div class="container">
+    <div class="ft-inner">
+      <div class="ft-logo">
+        <img src="images/logo.png" alt="Area 51 Bar Vimercate" width="34" height="34" loading="lazy"/>
+        <div>
+          <div class="fn">AREA 51</div>
+          <div class="fs">Bar &amp; Street Food · Vimercate</div>
+        </div>
+      </div>
+      <nav class="ft-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="specialita.html">Specialità</a>
+        <a href="info.html">Orari</a>
+        <a href="contatti.html">Prenota</a>
+        <a href="https://www.facebook.com/p/AREA-51-vimercate-61576139318551/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/area51vimercate/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <div class="ft-contacts">
+        <a href="tel:+393513473342">351 347 3342</a>
+        <span>SP45, 1 – Vimercate (MB)</span>
+      </div>
+    </div>
+    <div class="ft-copy">
+      <span>© 2026 Area 51 Bar – Vimercate · P.IVA da inserire</span>
+      <div class="ft-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="cookie.html">Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/global.js" defer></script>
+
+</body>
+</html>

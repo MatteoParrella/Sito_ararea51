@@ -1,0 +1,47 @@
+/* ══════════════════════════════════════════════════════
+   css/specialita.css — specialita.html only
+   ══════════════════════════════════════════════════════ */
+
+/* ── CARDS GRID ── */
+.spec-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem; margin-top: 3.5rem;
+}
+.spec-card { overflow: hidden; cursor: default; }
+.spec-img { height: 320px; overflow: hidden; position: relative; }
+.spec-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease,ease); filter: brightness(.72); }
+.spec-card:hover .spec-img img { transform: scale(1.06); filter: brightness(.58); }
+.spec-img-badge {
+  position: absolute; top: 1.2rem; left: 1.2rem;
+  font-size: .55rem; letter-spacing: 3px; text-transform: uppercase;
+  background: rgba(14,14,14,.85); color: var(--oro);
+  border: 1px solid rgba(200,169,110,.3); padding: .3rem .8rem;
+  backdrop-filter: blur(8px);
+}
+.spec-body { padding: 1.4rem 0; }
+.spec-label { font-size: .58rem; letter-spacing: 4px; text-transform: uppercase; color: var(--oro); margin-bottom: .4rem; }
+.spec-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--bianco); margin-bottom: .5rem; }
+.spec-desc  { font-size: .82rem; color: rgba(250,248,244,.45); line-height: 1.75; }
+.spec-link  { display: inline-flex; align-items: center; gap: .5rem; font-size: .72rem; color: var(--oro); margin-top: .9rem; transition: gap .25s; }
+.spec-link:hover { gap: .9rem; }
+
+/* ── HIGHLIGHTS ── */
+.highlights { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: 6rem; border: 1px solid var(--border); }
+.hl-item { padding: 2.5rem 2rem; border-right: 1px solid var(--border); text-align: center; transition: background .3s; }
+.hl-item:last-child { border-right: none; }
+.hl-item:hover { background: rgba(200,169,110,.03); }
+.hl-icon  { font-size: 2rem; margin-bottom: 1rem; opacity: .7; }
+.hl-title { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--bianco); margin-bottom: .5rem; }
+.hl-desc  { font-size: .78rem; color: rgba(250,248,244,.35); line-height: 1.75; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .spec-grid   { grid-template-columns: 1fr 1fr; }
+  .highlights  { grid-template-columns: 1fr; }
+  .hl-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .hl-item:last-child { border-bottom: none; }
+}
+@media (max-width: 640px) {
+  .spec-grid { grid-template-columns: 1fr; }
+  .spec-img  { height: 240px; }
+}

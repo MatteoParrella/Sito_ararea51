@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO primario -->
+  <title>Menu – AREA 51 Bar & Street Food Vimercate | Burger, Pinsa, Specialità</title>
+  <meta name="description" content="Menu completo di Area 51 Bar Vimercate: burger stellari, pinse, aperitivi, appetizer, specialità della casa e dolci. Ingredienti freschi, ricette originali."/>
+  <meta name="keywords" content="bar vimercate, street food vimercate, burger vimercate, pinsa vimercate, aperitivo vimercate, area 51 vimercate"/>
+  <meta name="author" content="Area 51 Bar – Vimercate"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://area51vimercate.it/menu.html"/>
+
+  <!-- Geo -->
+  <meta name="geo.region" content="IT-MB"/>
+  <meta name="geo.placename" content="Vimercate"/>
+  <meta name="geo.position" content="45.6171;9.3654"/>
+  <meta name="ICBM" content="45.6171, 9.3654"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant"/>
+  <meta property="og:title" content="Menu – AREA 51 Bar & Street Food Vimercate | Burger, Pinsa, Specialità"/>
+  <meta property="og:description" content="Menu completo di Area 51 Bar Vimercate: burger stellari, pinse, aperitivi, appetizer, specialità della casa e dolci. Ingredienti freschi, ricette originali."/>
+  <meta property="og:image" content="https://area51vimercate.it/images/hero-cocktail.png"/>
+  <meta property="og:url" content="https://area51vimercate.it/menu.html"/>
+  <meta property="og:site_name" content="Area 51 Bar Vimercate"/>
+  <meta property="og:locale" content="it_IT"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Menu – AREA 51 Bar & Street Food Vimercate | Burger, Pinsa, Specialità"/>
+  <meta name="twitter:description" content="Menu completo di Area 51 Bar Vimercate: burger stellari, pinse, aperitivi, appetizer, specialità della casa e dolci. Ingredienti freschi, ricette originali."/>
+  <meta name="twitter:image" content="https://area51vimercate.it/images/hero-cocktail.png"/>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Area 51 Bar & Street Food",
+    "image": "https://area51vimercate.it/images/hero-cocktail.png",
+    "url": "https://area51vimercate.it",
+    "telephone": "+393513473342",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "SP45, 1",
+      "addressLocality": "Vimercate",
+      "addressRegion": "MB",
+      "postalCode": "20871",
+      "addressCountry": "IT"
+    },
+    "geo": {"@type": "GeoCoordinates","latitude": 45.6171,"longitude": 9.3654},
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"06:00","closes":"22:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday"],"opens":"06:00","closes":"02:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"08:00","closes":"02:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday"],"opens":"06:00","closes":"18:30"}
+    ],
+    "servesCuisine": ["Burger","Street Food","Pinsa","Cocktail"],
+    "priceRange": "€€",
+    "sameAs": [
+      "https://www.facebook.com/p/AREA-51-vimercate-61576139318551/",
+      "https://www.instagram.com/area51vimercate/"
+    ],
+    "hasMap": "https://maps.google.com/?q=SP45+1+Vimercate",
+    "reservations": "https://area51vimercate.it/contatti.html"
+  }
+  </script>
+  
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <meta name="theme-color" content="#0e0e0e"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Analytics (Umami) -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="2e6f1b54-01ca-434e-818d-171a9f8963a6"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/menu.css"/>
+</head>
+<body>
+<nav id="navbar" role="navigation" aria-label="Navigazione principale">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo" aria-label="Area 51 Bar – Home">
+      <img src="images/logo.png" alt="Area 51 Logo" width="40" height="40" loading="eager"/>
+      <div>
+        <div class="nav-logo-name">AREA 51</div>
+        <div class="nav-logo-sub">Bar &amp; Street Food · Vimercate</div>
+      </div>
+    </a>
+    <ul class="nav-center" id="navCenter">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specialita.html">Specialità</a></li>
+      <li><a href="info.html">Orari & Info</a></li>
+      <li><a href="contatti.html">Prenota</a></li>
+      <li><a href="contatti.html" class="nav-cta">Prenota</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Apri/chiudi menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()" role="presentation"></div>
+<main id="main-content">
+
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep"> › </span><span class="cur">Menu</span></nav>
+    <span class="eyebrow">Cucina &amp; Cocktail</span>
+    <h1 class="titolo">Il Nostro Menu</h1>
+    <div class="linea"></div>
+    <p class="menu-page-sub">Ingredienti freschi, ricette originali, una passione autentica per ogni piatto.</p>
+  </div>
+</div>
+
+<div class="sezione" style="background:var(--nero)">
+  <div class="container">
+
+    <div class="cat-block fade-up">
+      <div class="cat-header"><div class="cat-num">01</div><div class="cat-info"><div class="cat-title">Aperitivi</div><div class="cat-sub">Cocktail incluso · ogni sera</div></div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Aperitivo Classico &amp; Cocktail</div><div class="mi-desc">Tagliere di salumi e formaggi con taralli pugliesi</div></div><div class="mi-right"><span class="mi-price">€ 12,00</span> <span class="mi-unit">/ p.</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Aperitivo dell'Area 51 &amp; Cocktail</div><div class="mi-desc">Mix di fritti della casa con salse home made</div></div><div class="mi-right"><span class="mi-price">€ 14,00</span> <span class="mi-unit">/ p.</span></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block fade-up">
+      <div class="cat-header"><div class="cat-num">02</div><div class="cat-info"><div class="cat-title">Appetizer</div><div class="cat-sub">Per iniziare</div></div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Anelli di Cipolla con Salsa BBQ</div><span class="mi-badge">surgelato ★</span></div><div class="mi-right"><span class="mi-price">€ 5,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Mozzarella Stick</div><span class="mi-badge">surgelato ★</span></div><div class="mi-right"><span class="mi-price">€ 6,00</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Polpettine di Melanzane</div><div class="mi-desc">Con salsa yogurt e menta</div><span class="mi-badge">surgelato ★</span></div><div class="mi-right"><span class="mi-price">€ 6,00</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Nachos con Guacamole e Salsa Mex</div></div><div class="mi-right"><span class="mi-price">€ 5,00</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Patatine Fritte</div></div><div class="mi-right"><span class="mi-price">€ 4,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Patate Americane Fritte</div></div><div class="mi-right"><span class="mi-price">€ 5,50</span></div></div>
+      </div>
+      <p class="cat-note">★ Surgelati all'origine per garantirne freschezza e qualità costante.</p>
+    </div>
+
+    <div class="cat-block fade-up">
+      <div class="cat-header"><div class="cat-num">03</div><div class="cat-info"><div class="cat-title">Burger</div><div class="cat-sub">Con patatine incluse</div></div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Saturno Burger</div><div class="mi-desc">Hamburger di manzo, anelli di cipolla, salsa BBQ, insalata e Cheddar</div></div><div class="mi-right"><span class="mi-price">€ 12,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Venere Burger</div><div class="mi-desc">Pollo fritto, Zola piccante e salsa al miele</div></div><div class="mi-right"><span class="mi-price">€ 12,00</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Mercurio Burger</div><div class="mi-desc">Hamburger di manzo, pomodoro, bacon croccante, insalata, Cheddar, maionese e ketchup</div></div><div class="mi-right"><span class="mi-price">€ 12,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Marte Burger</div><div class="mi-desc">Chiodo, maionese, cipolla caramellata della casa e insalata</div></div><div class="mi-right"><span class="mi-price">€ 12,00</span></div></div>
+      </div>
+      <p class="cat-aside">Tutti gli hamburger sono serviti con patatine fritte classiche o americane.</p>
+    </div>
+
+    <div class="cat-block fade-up">
+      <div class="cat-header"><div class="cat-num">04</div><div class="cat-info"><div class="cat-title">Pinsa</div><div class="cat-sub">Impasto artigianale</div></div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Via Lattea</div><div class="mi-desc">Zola piccante, mozzarella, ricotta, stracchino, miele di castagno e noci</div></div><div class="mi-right"><span class="mi-price">€ 9,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Cassiopea</div><div class="mi-desc">Pomodoro, mozzarella, tonno, cipolla caramellata della casa</div></div><div class="mi-right"><span class="mi-price">€ 9,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Andromeda</div><div class="mi-desc">Patata americana, bacon, mozzarella e rosmarino</div></div><div class="mi-right"><span class="mi-price">€ 10,00</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Polaris</div><div class="mi-desc">Ragù alla bolognese, mozzarella e ricotta salata</div></div><div class="mi-right"><span class="mi-price">€ 9,00</span></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block fade-up">
+      <div class="cat-header"><div class="cat-num">05</div><div class="cat-info"><div class="cat-title">Specialità</div><div class="cat-sub">Solo all'Area 51</div></div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Pulled Pork Intergalattico</div><div class="mi-desc">Spalla di suino marinata e cotta a bassa temperatura con salsa BBQ, ricotta salata e cipolla caramellata</div></div><div class="mi-right"><span class="mi-price">€ 11,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Arrosticini Marinati</div><div class="mi-desc">Arrosticini grigliati di pecora marinati con mix di erbe e spezie</div><span class="mi-badge">surgelato ★</span></div><div class="mi-right"><span class="mi-price">€ 1,20</span> <span class="mi-unit">/ pz</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Alette di Pollo Extraterrestri</div><div class="mi-desc">Alette piccanti marinate nella nostra salsa segreta a base di soia</div></div><div class="mi-right"><span class="mi-price">€ 8,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Patate Area 51</div><div class="mi-desc">Patate caserecce con uno speciale mix di spezie</div></div><div class="mi-right"><span class="mi-price">€ 5,00</span></div></div>
+      </div>
+      <p class="cat-note">★ Surgelati all'origine per garantirne freschezza e qualità costante.</p>
+    </div>
+
+    <div class="cat-block fade-up">
+      <div class="cat-header"><div class="cat-num">06</div><div class="cat-info"><div class="cat-title">Dolci</div><div class="cat-sub">Per finire in dolcezza</div></div></div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Cheesecake Basca</div><div class="mi-desc">Con topping a scelta</div></div><div class="mi-right"><span class="mi-price">€ 5,50</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Tiramisù</div></div><div class="mi-right"><span class="mi-price">€ 5,00</span></div></div>
+        <div class="menu-item"><div class="mi-left"><div class="mi-name">Brownies</div><div class="mi-desc">Con gelato alla crema e caramello salato al whisky</div><span class="mi-badge">surgelato ★</span></div><div class="mi-right"><span class="mi-price">€ 6,00</span></div></div>
+      </div>
+      <p class="cat-note">★ Surgelati all'origine per garantirne freschezza e qualità costante.</p>
+    </div>
+
+    <div class="allergens-box fade-up">
+      <div class="allergens-box-icon" aria-hidden="true">ⓘ</div>
+      <div class="allergens-box-text">
+        <strong style="color:rgba(250,248,244,.55)">Allergeni e intolleranze:</strong> il personale è a disposizione per informazioni dettagliate sugli allergeni presenti in ogni piatto. I prodotti contrassegnati ★ sono surgelati all'origine. I nostri prodotti possono contenere tracce di allergeni. Per <a href="contatti.html">info e prenotazioni</a>.
+      </div>
+    </div>
+
+    <div class="menu-cta-strip fade-up">
+      <h3 class="titolo">Vuoi assaggiare tutto questo?</h3>
+      <p>Prenota il tuo tavolo e goditi il menu in tutta comodità.</p>
+      <a href="contatti.html" class="btn-gold">Prenota un Tavolo →</a>
+    </div>
+
+  </div>
+</div>
+
+</main>
+<footer role="contentinfo">
+  <div class="container">
+    <div class="ft-inner">
+      <div class="ft-logo">
+        <img src="images/logo.png" alt="Area 51 Bar Vimercate" width="34" height="34" loading="lazy"/>
+        <div>
+          <div class="fn">AREA 51</div>
+          <div class="fs">Bar &amp; Street Food · Vimercate</div>
+        </div>
+      </div>
+      <nav class="ft-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="specialita.html">Specialità</a>
+        <a href="info.html">Orari</a>
+        <a href="contatti.html">Prenota</a>
+        <a href="https://www.facebook.com/p/AREA-51-vimercate-61576139318551/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/area51vimercate/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <div class="ft-contacts">
+        <a href="tel:+393513473342">351 347 3342</a>
+        <span>SP45, 1 – Vimercate (MB)</span>
+      </div>
+    </div>
+    <div class="ft-copy">
+      <span>© 2026 Area 51 Bar – Vimercate · P.IVA da inserire</span>
+      <div class="ft-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="cookie.html">Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/global.js" defer></script>
+
+</body>
+</html>

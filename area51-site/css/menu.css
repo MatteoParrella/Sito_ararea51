@@ -1,0 +1,91 @@
+/* ══════════════════════════════════════════════════════
+   css/menu.css — menu.html only
+   ══════════════════════════════════════════════════════ */
+
+/* ── MENU PAGE HEADER ── */
+.menu-page-sub {
+  font-size: .9rem; color: rgba(250,248,244,.4);
+  margin-top: 1rem; line-height: 1.8; max-width: 540px;
+  font-style: italic; font-family: var(--serif);
+}
+
+/* ── CATEGORY BLOCK ── */
+.cat-block { margin-bottom: 5rem; }
+.cat-block:last-child { margin-bottom: 0; }
+
+.cat-header {
+  display: flex; align-items: flex-end; gap: 1.5rem;
+  padding-bottom: 1.2rem; margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.cat-num {
+  font-family: var(--serif); font-size: 3.5rem; font-weight: 700;
+  color: rgba(200,169,110,.08); line-height: 1; flex-shrink: 0;
+  margin-bottom: -.2rem;
+}
+.cat-info {}
+.cat-title { font-family: var(--serif); font-size: clamp(1.4rem,3vw,2rem); font-weight: 700; color: var(--bianco); line-height: 1.1; }
+.cat-sub   { font-size: .6rem; letter-spacing: 4px; text-transform: uppercase; color: var(--oro); opacity: .65; margin-top: .3rem; }
+
+/* ── MENU ITEMS ── */
+.menu-list { max-width: 860px; }
+
+.menu-item {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 2rem; padding: 1.4rem 0; border-bottom: 1px solid rgba(200,169,110,.07);
+  transition: padding-left .2s var(--ease, ease);
+}
+.menu-item:last-of-type { border-bottom: none; }
+.menu-item:hover { padding-left: .6rem; }
+
+.mi-left { flex: 1; min-width: 0; }
+.mi-name { font-family: var(--serif); font-size: 1rem; color: var(--bianco); margin-bottom: .2rem; }
+.mi-desc { font-size: .78rem; color: rgba(250,248,244,.38); font-style: italic; line-height: 1.55; }
+.mi-badge {
+  display: inline-block; margin-top: .4rem;
+  font-size: .52rem; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(200,169,110,.5); background: rgba(200,169,110,.06);
+  border: 1px solid rgba(200,169,110,.12); padding: .15rem .5rem;
+  border-radius: 1px;
+}
+
+.mi-right { flex-shrink: 0; text-align: right; }
+.mi-price { font-family: var(--serif); font-size: 1rem; color: var(--oro); font-weight: 700; white-space: nowrap; }
+.mi-unit  { font-size: .68rem; color: rgba(200,169,110,.55); font-weight: 400; }
+
+/* ── NOTES ── */
+.cat-note {
+  font-size: .72rem; color: rgba(250,248,244,.28); font-style: italic;
+  margin-top: 1.5rem; padding: .9rem 1.1rem;
+  border-left: 2px solid rgba(200,169,110,.15); line-height: 1.7;
+}
+.cat-aside {
+  font-size: .75rem; color: rgba(250,248,244,.35);
+  margin-top: 1.5rem; padding: .9rem 1.1rem;
+  border-left: 2px solid rgba(200,169,110,.25); font-style: italic;
+}
+
+/* ── ALLERGENS NOTICE ── */
+.allergens-box {
+  background: var(--nero2); border: 1px solid var(--border);
+  padding: 1.5rem 2rem; margin-top: 4rem;
+  display: flex; align-items: flex-start; gap: 1rem;
+}
+.allergens-box-icon { font-size: 1rem; flex-shrink: 0; opacity: .6; margin-top: .1rem; }
+.allergens-box-text { font-size: .75rem; color: rgba(250,248,244,.3); line-height: 1.8; }
+.allergens-box-text a { color: var(--oro); }
+
+/* ── CTA STRIP ── */
+.menu-cta-strip {
+  background: var(--nero2); border: 1px solid var(--border);
+  padding: 3rem 2.5rem; text-align: center; margin-top: 5rem;
+}
+.menu-cta-strip h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: .7rem; }
+.menu-cta-strip p  { font-size: .85rem; color: rgba(250,248,244,.4); margin-bottom: 1.5rem; line-height: 1.8; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .menu-item { flex-direction: column; gap: .4rem; }
+  .mi-right  { text-align: left; }
+  .cat-num   { font-size: 2.5rem; }
+}
